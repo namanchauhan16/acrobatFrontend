@@ -1,0 +1,17 @@
+  <form>
+    <div class="form-group">
+      <label for="email">Your full name :</label>
+      <input [(ngModel)]="orderDetails.fullname"  name="fullname" type="text" class="form-control" id="text" style="margin-top: 5px;">
+    </div>
+    <div class="form-group"style="margin-top: 20px;">
+      <label for="pwd">Your phone no :</label>
+      <input [(ngModel)]="orderDetails.phonenum" name="phone_num" type="text" class="form-control" id="num" style="margin-top: 5px;">
+    </div>
+      <div class="form-group"style="margin-top: 20px;">
+      <label for="pwd">Your Address :</label>
+      <input [(ngModel)]="orderDetails.address" name="address" type="text" class="form-control" id="address" style="margin-top: 5px;">
+    </div>
+    <button type="submit" class="btn btn-outline-dark my-3" style="margin-top: 20px;margin-right: 10px;" (click)="closeDialog()">Cancle</button>
+    <button type="submit" class="btn btn-outline-dark my-3" style="margin-top: 20px;" (click)="placeOrder()">Place order</button>
+    <h3>{{message}}</h3>
+  </form>

@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<div id="main">
+    <div id="contentLeft" *ngFor="let product of productObj">
+        <img src="{{product.imageurl}}" alt="shoes" style="width: 100%;height: 100%;">
+    </div>
+    <div id="contentRight" *ngFor="let product of productObj">
+        <h1>{{product.brandname}}</h1>
+        <h3>Type- {{product.productname}}</h3>
+        <br>
+        <h4>Rating:- {{product.rating}}</h4>
+        <br>
+        <h4>Price of one Pair:- Rs.{{product.price}}</h4>
+        <span>Mention your size:- </span>
+        <input type="text" placeholder="7 to 11" style="margin-top: 26px; width: auto;text-align: center;" [(ngModel)]="userDetails.size">
+        <br>
+        <span>Mention quantity:- </span>
+        <input type="text" placeholder="1 to 4" style="margin-top: 26px; width: auto;text-align: center;" [(ngModel)]="userDetails.quantity">
+        <br>
+        <span>Select payment method:- </span>
+        <input type="text" placeholder="COD or Online payment" style="margin-top: 26px; width: auto;text-align: center;" [(ngModel)]="userDetails.paymentMethod">
+        <br>
+        <p style="margin-top: 20px;"><i>UPI</i> id for online payment:- (123)-456-789@paytm</p>
+        <button type="submit" class="btn btn-outline-dark my-3" (click)="doDetails()">
+            Buy Now <i class="fa fa-arrow-down" aria-hidden="true">
+            </i></button>
+        <h4 style="margin-top: 40px;">Product details</h4>
+        <span>The {{product.productname}} is made from a substantial
+            fabric constructed from 100% cotton,
+            this product provides a perfect
+            fit for any kind of rough sport no matter
+            what sports you are playing.
+        </span>
+    </div>
+</div>
+<app-footer></app-footer>

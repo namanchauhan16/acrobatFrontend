@@ -1,0 +1,57 @@
+body{
+  position: relative;
+}
+.container {
+  padding: 16px;
+}
+
+.topDiv{
+  color: white;
+  background-color: #212529;
+  height: 60px;
+  font-size: 30px;
+  padding-top: 14px; 
+  padding-left: 52px;
+}
+
+.form{
+  font-family: "Gotham Rounded SSm A","Gotham Rounded SSm B",Helvetica,Arial,sans-serif;
+  max-width: 550px;
+  margin-left: 40px;
+  margin-top: 70px;
+  padding-top: 20px;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 15px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.signupbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  opacity: 0.9;
+}
+
+a {
+  color: dodgerblue;
+}
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}

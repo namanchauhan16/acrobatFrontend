@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+<div id="upperDiv">
+    <div id="header">
+        <b>Our Products</b>
+    </div>
+    <span style="width: 4%;height: 4px;background-color: coral;display: inline-block;border-radius: 2px; margin-top: 20px;"></span>
+    <div id="content" style="margin-top: 20px;">
+        Here you can check out new products with fair price on Acrobat.
+    </div>
+    <div id="productDiv">
+        <table class="col-3" *ngFor="let product of productData">
+            <td style="padding: 10px;">
+                <div class="product">
+                    <img src={{product.imageurl}} alt="shoes"
+                        style="width: 307.81px;height: 187.56px; margin-top: 30px;">
+                    <div class="lowerDiv">
+                        <h2>{{product.brandname}}</h2>
+                        <h3>{{product.productname}}</h3>
+                        <br>
+                        <h3>Rating:- {{product.rating}}</h3>
+                        <br>
+                        <h3>Rs.{{product.price}}</h3>
+                        <button type="submit" class="btn btn-outline-dark my-3" style="border-radius: 5px;
+                         width: auto; font-size: 18px;" (click)="doPayment(product.id)">
+                            Buy Now<i class="fa fa-cart-arrow-down fa-2x" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </td>
+        </table>
+    </div>
+</div>
+<app-footer></app-footer>

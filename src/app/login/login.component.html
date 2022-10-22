@@ -1,0 +1,40 @@
+<div class="topDiv">
+  <i class="fa fa-shopping-bag" aria-hidden="true" style="padding-right: 10px;"></i> acrobat.
+</div>
+<div id="main" style="display: flex;">
+  <div id="leftDiv" style="width: 40%;float: left;">
+    <form class="form">
+      <div class="container" style="justify-content: center; display: flex;">
+        <span style="font-size: 30px;">Welcome back!</span>
+      </div>
+        <div class="container" style="margin-top: 20px;">
+          <h2>Sign up</h2>
+          <p>Please fill the credentials to sign up.</p>
+          <hr>
+      
+          <input #username type="text" placeholder="Enter username" [(ngModel)]="usernameLS" name="username" id="username" required>
+      
+          <input #password type="password" placeholder="Enter Password" name="psw" id="psw" required>
+    
+          <div class="checkbox">
+            <label><input type="checkbox"> Remember me</label>
+          </div>
+    
+          <div class="container">
+            <a href="register">create new user</a>
+          </div>
+    
+          <button type="submit" class="btn btn-outline-dark" (click)="signup(username.value,password.value)">Sign up</button>
+        </div>
+    
+        <div class="container">
+          <h4 style="color: red;">{{message}}</h4>
+        </div>
+      </form>
+  </div>
+  <div id="rightDiv" style="max-width: 60%;float: right;">
+      <img class="img" src="https://www.teahub.io/photos/full/82-824746_2000x1333-nice-images-collection-shoes-that-tie-themselves.jpg"
+       alt="shoes" style="width: 100%;">
+  </div>
+</div>
+<app-footer></app-footer>
